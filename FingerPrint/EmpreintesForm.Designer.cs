@@ -230,9 +230,9 @@ namespace FingerPrint
             this.personIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.personIdLabel.Location = new System.Drawing.Point(78, 34);
             this.personIdLabel.Name = "personIdLabel";
-            this.personIdLabel.Size = new System.Drawing.Size(51, 20);
+            this.personIdLabel.Size = new System.Drawing.Size(26, 20);
             this.personIdLabel.TabIndex = 16;
-            this.personIdLabel.Text = "label1";
+            this.personIdLabel.Text = "ID";
             // 
             // Empreintes
             // 

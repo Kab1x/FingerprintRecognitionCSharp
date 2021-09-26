@@ -82,8 +82,33 @@
     <Compile Include="FormulairInfoForm.Designer.cs">
       <DependentUpon>FormulairInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatchingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchingForm.Designer.cs">
+      <DependentUpon>MatchingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personne.cs" />
+    <Compile Include="Print2Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print2Print.Designer.cs">
+      <DependentUpon>Print2Print.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResults.Designer.cs">
+      <DependentUpon>SearchResults.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,10 +118,22 @@
     <EmbeddedResource Include="FormulairInfoForm.resx">
       <DependentUpon>FormulairInfoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MatchingForm.resx">
+      <DependentUpon>MatchingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print2Print.resx">
+      <DependentUpon>Print2Print.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchResults.resx">
+      <DependentUpon>SearchResults.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,9 +154,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\add-user.png" />
-    <None Include="Resources\droite.png" />
-    <None Include="Resources\gauche.png" />
+    <None Include="Resources\add-user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\droite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\gauche.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -135,6 +178,14 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\LargeFingerprintICON.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ResultImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

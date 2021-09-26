@@ -40,16 +40,15 @@ namespace FingerPrint
             this.LieuNaissanceTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.sexeComboBox = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.profilePicture = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.modifierEmpreintesButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.adrTextBox = new System.Windows.Forms.TextBox();
             this.annee = new System.Windows.Forms.ComboBox();
             this.jour = new System.Windows.Forms.ComboBox();
             this.mois = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -145,17 +144,17 @@ namespace FingerPrint
             this.sexeComboBox.Size = new System.Drawing.Size(121, 28);
             this.sexeComboBox.TabIndex = 10;
             // 
-            // pictureBox1
+            // profilePicture
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(801, 118);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.profilePicture.BackColor = System.Drawing.Color.White;
+            this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
+            this.profilePicture.Location = new System.Drawing.Point(801, 118);
+            this.profilePicture.Name = "profilePicture";
+            this.profilePicture.Size = new System.Drawing.Size(144, 144);
+            this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profilePicture.TabIndex = 11;
+            this.profilePicture.TabStop = false;
+            this.profilePicture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label7
             // 
@@ -167,24 +166,14 @@ namespace FingerPrint
             this.label7.TabIndex = 12;
             this.label7.Text = "Photo d\'identité";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(632, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(313, 50);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Ajouter a la base de donées ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // modifierEmpreintesButton
             // 
             this.modifierEmpreintesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.modifierEmpreintesButton.Location = new System.Drawing.Point(137, 300);
+            this.modifierEmpreintesButton.Location = new System.Drawing.Point(569, 281);
             this.modifierEmpreintesButton.Name = "modifierEmpreintesButton";
-            this.modifierEmpreintesButton.Size = new System.Drawing.Size(225, 45);
+            this.modifierEmpreintesButton.Size = new System.Drawing.Size(216, 38);
             this.modifierEmpreintesButton.TabIndex = 14;
-            this.modifierEmpreintesButton.Text = "Ajouter les empreintes";
+            this.modifierEmpreintesButton.Text = "Suivant";
             this.modifierEmpreintesButton.UseVisualStyleBackColor = true;
             this.modifierEmpreintesButton.Click += new System.EventHandler(this.modifierEmpreintesButton_Click);
             // 
@@ -244,9 +233,8 @@ namespace FingerPrint
             this.Controls.Add(this.adrTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.modifierEmpreintesButton);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.profilePicture);
             this.Controls.Add(this.sexeComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LieuNaissanceTextBox);
@@ -259,7 +247,7 @@ namespace FingerPrint
             this.Controls.Add(this.label1);
             this.Name = "FormulairInfoForm";
             this.Text = "MainAppInterfaceForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,9 +265,8 @@ namespace FingerPrint
         private System.Windows.Forms.TextBox LieuNaissanceTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox sexeComboBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox profilePicture;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button modifierEmpreintesButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox adrTextBox;

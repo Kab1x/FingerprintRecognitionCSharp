@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace FingerPrint
 {
-   
     public partial class Accueil : Form
     {
+        public static string connectionString = "datasource=localhost; username=root; password=; database=fingerprints";
+        public static MySqlConnection con;
         public static MySqlConnection mySqlConInstance;
         public static int res;
+
         public Accueil()
         {
             InitializeComponent();
@@ -32,8 +28,7 @@ namespace FingerPrint
         {
             if (res == 1)
             {
-                FormulairInfoForm newWindow = new FormulairInfoForm();
-                newWindow.Show();
+                (new Modifier()).Show();
                 this.Hide();
             }
             else
@@ -60,19 +55,40 @@ namespace FingerPrint
         }
         private int OpenConnectionToDB()
         {
-            string connectionString = "datasource=localhost; username=root; password=; database=fingerprints";
-            MySqlConnection con = new MySqlConnection(connectionString);
+            
+            con = new MySqlConnection(connectionString);
             try
             {
                 con.Open();
                 mySqlConInstance = con;
             }
-            catch (Exception e)
+            catch (Exception _)
             {
-                MessageBox.Show("ERROR: \nStatus de connexion " + e.ToString());
                 return 0;
             }
             return 1;
+        }
+
+        private void matchingClick_Click(object sender, EventArgs e)
+        {
+            if (res == 1)
+            {
+                MatchingForm mf = new MatchingForm();
+                mf.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Problème de liason à la base de données");
+                res = OpenConnectionToDB();
+                UpdateUI(res);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Print2Print p2p = new Print2Print();
+            p2p.ShowDialog();
         }
     }
 }
